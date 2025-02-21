@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>barang</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
 </nav>
 <div class="container">
     <h1>Data Barang</h1>
-    <a href="view.tambah.php" class="btn btn-info">tambah data baru</a>
+    <a href="view.tambah.php" class="btn btn-info"><i class="fa-solid fa-square-plus"></i>tambah data baru</a>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -59,8 +60,10 @@
                     <td><?php echo $result['stok'] ?></td>
 
                     <td>
-                        <a href="" class="btn btn-warning">edit |</a>
-                       <a href="" class="btn btn-danger">hapus |</a>
+                        <a href="view_edit.php?id_barang=<?php echo $result['id_barang']?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" ></i> edit |</a>
+                       <a href="hapus.php?id_barang=<?php echo $result['id_barang']?>"
+                       onclick="return confirm ('kamu yakin mau hapus barang ini ?')"
+                        class="btn btn-danger"><i class="fa-solid fa-trash"></i> hapus |</a>
                     </td>
                 </tr>
                 <?php

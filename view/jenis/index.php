@@ -51,8 +51,7 @@
                     
 
                     <td>
-                        <a href="" class="btn btn-warning">edit |</a>
-                       <a href="" class="btn btn-danger">hapus |</a>
+                        <a href="view_edit.php?id_jenis=<?php echo $result['id_jenis']?>" class="btn btn-warning">edit |</a>
                     </td>
                 </tr>
                 <?php
